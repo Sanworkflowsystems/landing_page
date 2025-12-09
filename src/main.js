@@ -38,11 +38,11 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // Reveal-on-scroll for .reveal-up elements
+    // Reveal-on-scroll for .reveal-up and .reveal-item elements
     (function(){
       const prefersReduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
       if(prefersReduced) {
-        document.querySelectorAll('.reveal-up').forEach(el => el.classList.add('revealed'));
+        document.querySelectorAll('.reveal-up, .reveal-item').forEach(el => el.classList.add('revealed'));
         return;
       }
       const io = new IntersectionObserver((entries, obs) => {
@@ -52,12 +52,20 @@ document.addEventListener('DOMContentLoaded', () => {
             obs.unobserve(entry.target);
           }
         });
-      }, { threshold: 0.16 });
-      document.querySelectorAll('.reveal-up').forEach(el => io.observe(el));
+      }, { threshold: 0.12 });
+      document.querySelectorAll('.reveal-up, .reveal-item').forEach(el => io.observe(el));
     })();
 
     // Staggered reveal for card grids
-    document.querySelectorAll('.cards-grid .reveal-up').forEach((el,i)=> el.style.setProperty('--reveal-delay', `${i*0.09}s`));
+    document.querySelectorAll('.cards-grid .reveal-up').forEach((el,i)=> el.style.setProperty('--reveal-delay', `${i*0.1}s`));
+    document.querySelectorAll('.step-card').forEach((el,i)=> el.style.setProperty('--reveal-delay', `${i*0.08}s`));
+
+    // Clone logos for infinite scroll effect
+    const marquee = document.querySelector('.logo-marquee');
+    if(marquee){
+      const logos = marquee.innerHTML;
+      marquee.innerHTML = logos + logos;
+    }
 
     // Optional: Add basic form validation
     const contactForm = document.querySelector('#contact form');
