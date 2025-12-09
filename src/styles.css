@@ -32,32 +32,29 @@
 
 @layer components {
   #spline-background {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 0;
-    opacity: 0.4;
-    pointer-events: none;
+    position: fixed !important;
+    top: 0 !important;
+    left: 0 !important;
+    width: 100vw !important;
+    height: 100vh !important;
+    z-index: -1 !important;
+    opacity: 0.35;
+    pointer-events: none !important;
   }
 
   #spline-background spline-viewer {
-    width: 100%;
-    height: 100%;
+    width: 100% !important;
+    height: 100% !important;
+    display: block !important;
   }
 
   #spline-background::after {
     content: '';
-    position: absolute;
+    position: fixed;
     inset: 0;
-    background: radial-gradient(circle at center, transparent 0%, rgba(14, 14, 19, 0.3) 50%, rgba(14, 14, 19, 0.6) 100%);
-    pointer-events: none;
-  }
-
-  header, main, footer {
-    position: relative;
     z-index: 1;
+    background: radial-gradient(circle at center, transparent 0%, rgba(14, 14, 19, 0.4) 50%, rgba(14, 14, 19, 0.7) 100%);
+    pointer-events: none;
   }
 
   .btn-primary {
