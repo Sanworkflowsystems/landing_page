@@ -1,4 +1,22 @@
 document.addEventListener('DOMContentLoaded', () => {
+    // Header border on scroll
+    const header = document.getElementById('main-header');
+    const hero = document.getElementById('hero');
+
+    if (header && hero) {
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    header.classList.remove('border-b', 'border-glass-border');
+                } else {
+                    header.classList.add('border-b', 'border-glass-border');
+                }
+            });
+        }, { threshold: 0.1 });
+
+        observer.observe(hero);
+    }
+
     // Mobile menu (side drawer)
     const mobileMenuButton = document.getElementById('mobile-menu-button');
     const mobileMenu = document.getElementById('mobile-menu');

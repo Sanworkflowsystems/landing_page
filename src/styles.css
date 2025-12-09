@@ -73,8 +73,9 @@
   }
 
   header {
-    position: relative;
-    z-index: 1000;
+    position: sticky;
+    top: 0;
+    z-index: 9999;
     isolation: isolate;
   }
 
@@ -95,6 +96,14 @@
   }
   .btn-primary:hover {
     @apply -translate-y-0.5 scale-[1.02];
+    box-shadow: 0 20px 60px rgba(0,240,224,0.16);
+  }
+
+  .btn-secondary {
+    @apply inline-block rounded-2xl px-5 py-3 font-bold border-2 border-accent1 text-accent1 transition-all duration-200;
+  }
+  .btn-secondary:hover {
+    @apply bg-accent1 text-bg0 -translate-y-0.5 scale-[1.02];
     box-shadow: 0 20px 60px rgba(0,240,224,0.16);
   }
 
