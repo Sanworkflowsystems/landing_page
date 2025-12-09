@@ -14,9 +14,15 @@
 
     <link rel="stylesheet" href="dist/output.css">
 
+    <script type="module" src="https://unpkg.com/@splinetool/viewer@1.9.48/build/spline-viewer.js"></script>
     <script defer src="src/main.js"></script>
 </head>
 <body class="bg-bg0 text-fg font-sans">
+
+    <!-- Spline 3D Background -->
+    <div id="spline-background">
+        <spline-viewer url="https://prod.spline.design/rq2VW592sEr7qnRD/scene.splinecode"></spline-viewer>
+    </div>
 
     <!-- Header -->
     <header class="sticky top-0 z-50 h-[72px] bg-gradient-to-b from-[rgba(255,255,255,0.02)] to-[rgba(255,255,255,0.01)] backdrop-blur-sm border-b border-glass-border">
@@ -54,7 +60,7 @@
 
     <main>
         <!-- Hero Section -->
-        <section id="hero" class="relative text-center py-32 md:py-48 min-h-screen flex items-center justify-center overflow-hidden" style="background: radial-gradient(circle at 10% 20%, rgba(0,240,224,0.06), transparent 6%), radial-gradient(circle at 90% 80%, rgba(122,246,224,0.04), transparent 8%), var(--bg-0);">
+        <section id="hero" class="relative text-center py-32 md:py-48 min-h-screen flex items-center justify-center overflow-hidden">
             <div class="container mx-auto px-6 max-w-4xl">
                 <h1 class="text-4xl md:text-6xl lg:text-7xl font-heading font-extrabold tracking-tighter leading-tight mb-6 reveal-item">
                     <span class="accent-clip">Scale Revenue</span> with<br/>Personalized AI Outreach

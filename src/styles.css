@@ -31,6 +31,35 @@
 }
 
 @layer components {
+  #spline-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    opacity: 0.4;
+    pointer-events: none;
+  }
+
+  #spline-background spline-viewer {
+    width: 100%;
+    height: 100%;
+  }
+
+  #spline-background::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle at center, transparent 0%, rgba(14, 14, 19, 0.3) 50%, rgba(14, 14, 19, 0.6) 100%);
+    pointer-events: none;
+  }
+
+  header, main, footer {
+    position: relative;
+    z-index: 1;
+  }
+
   .btn-primary {
     @apply inline-block rounded-2xl bg-gradient-to-r from-accent1 to-accent2 px-5 py-3 font-bold text-[#02030A] shadow-lg transition-all duration-200;
     box-shadow: var(--btn-glow);
