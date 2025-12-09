@@ -78,13 +78,6 @@ document.addEventListener('DOMContentLoaded', () => {
     document.querySelectorAll('.cards-grid .reveal-up').forEach((el,i)=> el.style.setProperty('--reveal-delay', `${i*0.1}s`));
     document.querySelectorAll('.step-card').forEach((el,i)=> el.style.setProperty('--reveal-delay', `${i*0.08}s`));
 
-    // Clone logos for infinite scroll effect
-    const marquee = document.querySelector('.logo-marquee');
-    if(marquee){
-      const logos = marquee.innerHTML;
-      marquee.innerHTML = logos + logos;
-    }
-
     // Optional: Add basic form validation
     const contactForm = document.querySelector('#contact form');
     if (contactForm) {

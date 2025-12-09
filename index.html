@@ -25,7 +25,7 @@
     </div>
 
     <!-- Header -->
-    <header id="main-header" class="sticky top-0 z-50 h-[72px] bg-gradient-to-b from-[rgba(255,255,255,0.02)] to-[rgba(255,255,255,0.01)] backdrop-blur-sm">
+    <header id="main-header" class="h-[72px] bg-gradient-to-b from-[rgba(255,255,255,0.02)] to-[rgba(255,255,255,0.01)] backdrop-blur-sm">
         <div class="container mx-auto px-6 h-full flex justify-between items-center">
             <a href="#" class="font-heading font-bold text-2xl">Lumora<span class="text-accent1">.ai</span></a>
             <nav class="hidden md:flex items-center space-x-8">
@@ -177,13 +177,10 @@
             <div class="container mx-auto px-6 text-center">
                 <h2 class="text-3xl md:text-4xl font-bold font-heading mb-4 reveal-item">Our Network & Integrations</h2>
                 <p class="text-lg text-muted mb-12 reveal-item">Trusted by leading institutions and partnered with industry innovators.</p>
-                <div class="logo-marquee-container">
-                    <div class="logo-marquee">
-                        <div class="logo-slot"><img src="assets/logos/image.png" alt="BITS Pilani"></div>
-                        <div class="logo-slot"><img src="assets/logos/image copy.png" alt="Iravan Technologies"></div>
-                        <div class="logo-slot"><img src="assets/logos/image.png" alt="BITS Pilani"></div>
-                        <div class="logo-slot"><img src="assets/logos/image copy.png" alt="Iravan Technologies"></div>
-                    </div>
+                <div class="flex flex-wrap justify-center items-center gap-8 max-w-4xl mx-auto">
+                    <div class="logo-slot reveal-item"><img src="assets/logos/image.png" alt="BITS Pilani"></div>
+                    <div class="logo-slot reveal-item" style="transition-delay: 100ms;"><img src="assets/logos/image copy.png" alt="Iravan Technologies"></div>
+                    <div class="logo-slot reveal-item" style="transition-delay: 200ms;"><img src="assets/logos/quiklee.png" alt="Quiklee" onerror="this.parentElement.style.display='none'"></div>
                 </div>
             </div>
         </section>
