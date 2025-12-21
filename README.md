@@ -1,6 +1,6 @@
-# Lumora.ai Landing Page - v2.0
+# Outleadz Landing Page - v2.0
 
-This project is a premium, single-page landing page for Lumora.ai, built with a static HTML/CSS/JS stack and styled with TailwindCSS. This version is a complete refactor of the initial site to align with a more elegant, futuristic, and enterprise-grade design system.
+This project is a premium, single-page landing page for Outleadz, built with a static HTML/CSS/JS stack and styled with TailwindCSS. This version is a complete refactor of the initial site to align with a more elegant, futuristic, and enterprise-grade design system.
 
 ## Project Structure
 
@@ -17,7 +17,7 @@ Since this is a static website, you can simply open the `index.html` file direct
 
 For a more accurate experience that mimics a live web server, you can use a simple command-line server. If you have Node.js installed, you can use the `serve` package:
 
-1.  Make sure you are in the `lumora-site` directory.
+1.  Make sure you are in the `outleadz-site` directory.
 2.  Run the server:
     ```bash
     npx serve .
@@ -37,7 +37,7 @@ The project uses TailwindCSS for styling. To recompile the CSS after making chan
 2.  **Run Build Command:**
     ```bash
     # Replace with the correct absolute path on your system if different
-    C:\\Users\\Kush\\Desktop\\AiAutomationLandingPage\\Lumora_outreach_landing_page\\lumora-site\\node_modules\\.bin\\tailwindcss.cmd -i ./src/styles.css -o ./dist/output.css
+    C:\\Users\\Kush\\Desktop\\AiAutomationLandingPage\\Outleadz_outreach_landing_page\\outleadz-site\\node_modules\\.bin\\tailwindcss.cmd -i ./src/styles.css -o ./dist/output.css
     ```
 
 ## Content & Asset Replacement Guide
